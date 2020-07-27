@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:fonts="clr-namespace:XamarinAppSample.Fonts"
              mc:Ignorable="d"
              x:Class="XamarinAppSample.Views.MenuPage"
              Title="Menu">
@@ -20,6 +21,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="10">
+                            <Image Source="{FontImage Glyph={x:Static fonts:IconFont.ArrowUpCircleOutline}, FontFamily={x:OnPlatform Android=MaterialIconFont, UWP='Material Design Icons'}}" BackgroundColor="Green"/>
                             <Label Text="{Binding Title}" d:Text="{Binding .}" FontSize="20"/>
                         </Grid>
                     </ViewCell>
